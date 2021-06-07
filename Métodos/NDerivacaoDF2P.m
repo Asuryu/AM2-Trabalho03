@@ -11,6 +11,8 @@ end
 
 dydx = zeros(1,n);
 
-for i=2:n-1
+for i=1:n-1
     dydx(i) = (y(i+1) - y(i)) / h;
 end
+
+dydx(n) = dydx(n-1);
